@@ -1,0 +1,28 @@
+CREATE TABLE customer (acc_no varchar(10) PRIMARY KEY,name varchar(30),email varchar(30),curr_balance int);
+
+CREATE TABLE transfer(acc_number int AUTO_INCREMENT PRIMARY KEY,from_name varchar(20),to_name varchar(20),value_trand int); 
+
+INSERT INTO customer VALUES (1,'Atharva Keskar','atharvakeskar@email.com',100000);
+
+INSERT INTO customer VALUES (2,'Darshan Khaire','darshankhaire@email.com',200000);
+
+INSERT INTO customer VALUES (3,'Atharva Kelkar','atharvakelkar@email.com',250000);
+
+INSERT INTO customer VALUES (4,'Abhijeet Jadhav','abhijeetjadhav@email.com',500000);
+
+INSERT INTO customer (acc_no,name,email,curr_balance) 
+VALUES 
+(5,'Onkar Garudkar','onkargarudkar@email.com',150000),
+(6,'Ganesh Khedkar','ganeshkhedkar@email.com',450000),
+(7,'Shreyas Kulkarni','shreyaskulkarni@email.com',200000),
+(8,'Prathmesh Ranade','prathmeshranade@email.com',550000),
+(9,'Om Joshi','omjoshi@email.com',130000),
+(10,'Akshay Kulkarni','akshaykulkarni@email.com',750000);
+
+ALTER TABLE customer MODIFY acc_no int;
+
+ALTER TABLE transfer CHANGE COLUMN acc_number transaction_number int;
+
+ALTER TABLE transfer ADD COLUMN STATUS varchar(10);
+
+ALTER TABLE transfer MODIFY transaction_number INTEGER NOT NULL AUTO_INCREMENT;
